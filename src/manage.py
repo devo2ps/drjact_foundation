@@ -5,8 +5,8 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'demo.settings')
-    try:
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'demo.settings.dev')
+    try:                                           #either .dev or .prod
         from django.core.management import execute_from_command_line
     except ImportError as exc:
         raise ImportError(
